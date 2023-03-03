@@ -4,7 +4,7 @@ by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/
 [Huan Wang](http://huanwang.tech/), [Can Qin](https://canqin.tech/), [Bin Sun](https://www.linkedin.com/in/bin-sun-2993b4142/), 
 [Chang Liu](https://sites.google.com/view/cliu5/home/), [Yun Fu](http://www1.ece.neu.edu/~yunfu/). 
 
-[![arXiv](https://img.shields.io/badge/📃-arXiv-ff69b4)]() 
+[![arXiv](https://img.shields.io/badge/📃-arXiv-ff69b4)](https://arxiv.org/abs/2303.01494) 
 [![webpage](https://img.shields.io/badge/🖥-Website-9cf)](https://ma-xu.github.io/Context-Cluster/)
 <!--
 [![Open All Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1s108WmqSVH9MILOjSAu29QyAEjExOWAP?usp=sharing), 
