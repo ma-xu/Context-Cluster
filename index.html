@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="R2L">
+  <meta name="keywords" content="Neural Light Field, distillation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image as Set of Points</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://github.com/snap-research/R2L">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+      </div> 
+
+    </div>
+  </nav> -->
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Image as Set of Points</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://ma-xu.github.io/">Xu Ma</a><sup>1,*</sup>,</span>
+              <span class="author-block">
+                <a href="https://yzhouas.github.io/">Yuqian Zhou</a><sup>2,*</sup>,</span>
+              <span class="author-block">
+                <a href="http://huanwang.tech">Huan Wang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://canqin.tech/">Can Qin</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=7s-TBDUAAAAJ&hl=en">Bin Sun</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/cliu5/home/">Chang Liu</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://www1.ece.neu.edu/~yunfu/">Yun Fu</a><sup>2</sup>,
+              </span>
+            </div>
+            <h1 style="font-size:23px;font-weight:bold">ICLR 2022 (Oral, Notable-top-5%)</h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Northeastern University,</span>
+              <span class="author-block"><sup>2</sup>Adobe Inc.,</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">(<sup>*</sup>Equal Contribution)</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- openreview Link. -->
+                <span class="link-block">
+                  <a href="https://openreview.net/forum?id=awnvqZja69"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-desktop" aria-hidden="true"></i>
+                    </span>
+                    <span>Openreview</span>
+                  </a>
+                </span>
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://openreview.net/pdf?id=awnvqZja69"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                 <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/ma-xu/Context-Cluster"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Hugginface Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/ma-xu/Context-Cluster"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      🤗
+                    </span>
+                    <span>Hugginface space</span>
+                  </a>
+                </span>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align="center"> <img src="static/images/frontpage.png" width="750px"> </div>
+        <div class="content has-text-centered">
+          We present R2L, a deep (88-layer) residual MLP network that can represent the neural light field (NeLF) of
+          complex synthetic and real-world scenes. It is featured by compact representation size (~20MB storage size),
+          fast rendering speed (~30x speedup than NeRF), significantly improved visual quality (1.4dB boost than NeRF),
+          with no whistles and bells (no special data structure or parallelism required).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <span style="font-style: italic;     font-size: large;">What is an image and how to extract latent features? </span><br>
+
+            Convolutional Networks (ConvNets) consider an image as organized pixels in a rectangular shape and extract features via convolutional operation in local region; Vision Transformers (ViTs) treat an image as a sequence of patches and extract features via attention mechanism in a global range. In this work, we introduce a straightforward and promising paradigm for visual representation, which is called Context Clusters. Context clusters (CoCs) view an image as a set of unorganized points and extract features via simplified clustering algorithm. In detail, each point includes the raw feature (e.g., color) and positional information (e.g. coordinates), and a simplified clustering algorithm is employed to group and extract deep features hierarchically. Our CoCs are convolution- and attention-free, and only rely on clustering algorithm for spatial interaction. Owing to the simple design, we show CoCs endow gratifying interpretability via the visualization of clustering process. Our CoCs aim at providing a new perspective on image and visual representation, which may enjoy broad applications in different domains and exhibit profound insights. Even though we are not targeting SOTA performance, COCs still achieve comparable or even better performance than ConvNets or ViTs on several benchmarks.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+
+          <!-- NeRF results: Blender -->
+          <h2 class="title is-3">1. Visual Comparison on NeRF Synthetic and Realistic Datasets</h2>
+          <p>(You may pause the video to review the difference between NeRF and ours)</p>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/blender_chair.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Chair (Blender). Left: NeRF (PSNR: 33.90), Right: Ours (PSNR: 36.71)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/blender_drums.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Drums (Blender). Left: NeRF (PSNR: 25.56), Right: Ours (PSNR: 26.03)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/blender_ficus.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Ficus (Blender). Left: NeRF (PSNR: 28.88), Right: Ours (PSNR: 28.63)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/blender_hotdog.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Hotdog (Blender). Left: NeRF (PSNR: 34.64), Right: Ours (PSNR: 38.07)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/blender_lego.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Lego (Blender). Left: NeRF (PSNR: 31.42), Right: Ours (PSNR: 32.53)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/blender_materials.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Materials (Blender). Left: NeRF (PSNR: 29.22), Right: Ours (PSNR: 30.20)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/blender_mic.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Mic (Blender). Left: NeRF (PSNR: 30.84), Right: Ours (PSNR: 32.80)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/blender_ship.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Ship (Blender). Left: NeRF (PSNR: 29.30), Right: Ours (PSNR: 29.98)</p>
+          </div>
+
+
+          <!-- NeRF results: LLFF -->
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/llff_room.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Room (LLFF). Left: NeRF (PSNR: 33.07), Right: Ours (PSNR: 33.30)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/llff_fern.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Fern (LLFF). Left: NeRF (PSNR: 26.86), Right: Ours (PSNR: 26.87)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/llff_leaves.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Leaves (LLFF). Left: NeRF (PSNR: 22.40), Right: Ours (PSNR: 22.71)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/llff_orchids.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Orchids (LLFF). Left: NeRF (PSNR: 21.29), Right: Ours (PSNR: 21.01)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/llff_flower.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Flower (LLFF). Left: NeRF (PSNR: 28.22), Right: Ours (PSNR: 28.67)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/llff_trex.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: T-Rex (LLFF). Left: NeRF (PSNR: 28.10), Right: Ours (PSNR: 28.12)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/NeRF/llff_horns.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Horns (LLFF). Left: NeRF (PSNR: 28.86), Right: Ours (PSNR: 28.95)</p>
+          </div>
+
+
+          <!-- DONeRF results -->
+          <h2 class="title is-3">2. Visual Comparison on DONeRF Synthetic Dataset</h2>
+          <p>(You may pause the video to see the difference between NeRF and ours)</p>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/DONeRF/sanmiguel.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Sanmiguel (Blender). Left: NeRF (PSNR: 28.96), Right: Ours (PSNR: 31.37)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/DONeRF/pavillon.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Pavillon (Blender). Left: NeRF (PSNR: 32.82), Right: Ours (PSNR: 34.10)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/DONeRF/classroom.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Classroom (Blender). Left: NeRF (PSNR: 35.33), Right: Ours (PSNR: 38.96)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/DONeRF/bulldozer.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Bulldozer (Blender). Left: NeRF (PSNR: 36.85), Right: Ours (PSNR: 38.01)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/DONeRF/forest.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Forest (Blender). Left: NeRF (PSNR: 28.11), Right: Ours (PSNR: 34.18)</p>
+          </div>
+
+          <div class="content has-text-centered">
+            <video class="video-fluid w-100" controls autoplay loop muted>
+              <source src="static/videos/DONeRF/barbershop.mp4" type="video/mp4" />
+            </video>
+            <p>Scene: Barbershop (Blender). Left: NeRF (PSNR: 33.92), Right: Ours (PSNR: 36.05)</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{
+    ma2023image,
+    title={Image as Set of Points},
+    author={Xu Ma and Yuqian Zhou and Huan Wang and Can Qin and Bin Sun and Chang Liu and Yun Fu},
+    booktitle={International Conference on Learning Representations},
+    year={2023},
+    url={https://openreview.net/forum?id=awnvqZja69}
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div align="center" class="container">
+      <div class="columns is-centered">
+        <div class="content">
+          This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
