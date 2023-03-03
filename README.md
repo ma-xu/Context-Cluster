@@ -1,4 +1,4 @@
-# Image as Set of Points - ICLR'23 [Oral]
+# Image as Set of Points - ICLR'23 [Oral, Top5%]
 
 by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/), 
 [Huan Wang](http://huanwang.tech/), [Can Qin](https://canqin.tech/), [Bin Sun](https://www.linkedin.com/in/bin-sun-2993b4142/), 
