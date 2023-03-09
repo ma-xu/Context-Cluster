@@ -46,6 +46,11 @@ data prepare: ImageNet with the following folder structure, you can extract Imag
 │  ├── ......
 ```
 
+## TO DO (Mar 9):
+- [ ] update the checkpoints (conv1x1 -> nn.linear, shape doesn't match)
+- [ ] add large model and checkpoints
+- [ ] release codes/ checkpoints for CoC without region partition
+
 
 
 ### 2. Pre-trained Context Cluster Models
