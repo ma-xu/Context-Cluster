@@ -638,6 +638,37 @@ def coc_base_dim96(pretrained=False, **kwargs):
     return model
 
 
+"""
+Updated: add plain models (without region partition) for tiny, small, and base , etc.
+Re-trained with new implementation (PWconv->MLP for faster training and inference), achieve slightly better performance.
+"""
+@register_model
+def coc_tiny_plain(pretrained=False, **kwargs):
+    # sharing same parameters as coc_tiny, without region partition.
+    layers = [3, 4, 5, 2]
+    norm_layer = GroupNorm
+    embed_dims = [32, 64, 196, 320]
+    mlp_ratios = [8, 8, 4, 4]
+    downsamples = [True, True, True, True]
+    proposal_w = [4, 4, 2, 2]
+    proposal_h = [4, 4, 2, 2]
+    fold_w = [1, 1, 1, 1]
+    fold_h = [1, 1, 1, 1]
+    heads = [4, 4, 8, 8]
+    head_dim = [24, 24, 24, 24]
+    down_patch_size = 3
+    down_pad = 1
+    model = ContextCluster(
+        layers, embed_dims=embed_dims, norm_layer=norm_layer,
+        mlp_ratios=mlp_ratios, downsamples=downsamples,
+        down_patch_size=down_patch_size, down_pad=down_pad,
+        proposal_w=proposal_w, proposal_h=proposal_h, fold_w=fold_w, fold_h=fold_h,
+        heads=heads, head_dim=head_dim,
+        **kwargs)
+    model.default_cfg = default_cfgs['model_small']
+    return model
+
+
 if has_mmdet:
     @seg_BACKBONES.register_module()
     @det_BACKBONES.register_module()
