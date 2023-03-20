@@ -29,7 +29,7 @@ by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/
 </div>
 
 <div align="center">
-    More examples for clustering training updates(from scratch to last epoch).
+    <b>More examples for clustering training updates(from scratch to last epoch).</b>
     <br>
     <img src="./images/gifcompressor/3_Stage0_Block0_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
     <img src="./images/gifcompressor/F_Stage0_Block0_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
