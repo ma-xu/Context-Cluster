@@ -11,9 +11,32 @@ by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/
 [![Huggingface space](https://img.shields.io/badge/🤗-Huggingface%20space-brightgreen.svg)](https://huggingface.co/spaces/CVPR/LIVE)
 -->
 
-<div align="center">
+<!--<div align="center">
   <img src="uploads/img1.png" width="550px" height="380px">
+</div>-->
+
+
+<div align="center">
+    An example of clustering training updates(from scratch to last epoch) for the four stages.
+    <br>
+    <img src="./images/gifcompressor/A_Stage0_Block0_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
+    <img src="./images/gifcompressor/A_Stage1_Block3_Head2-min.gif" width="150px" height="150px" alt="Elephant at sunset">
+    <img src="./images/gifcompressor/A_Stage2_Block3_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
+    <img src="./images/gifcompressor/A_Stage3_Block1_Head4-min.gif" height="150px" alt="Elephant at sunset">
+    <br>
+    
 </div>
+
+<div align="center">
+    More examples for clustering training updates(from scratch to last epoch).
+    <br>
+    <img src="./images/gifcompressor/3_Stage0_Block0_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
+    <img src="./images/gifcompressor/F_Stage0_Block0_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
+    <img src="./images/gifcompressor/C_Stage0_Block1_Head3-min.gif" width="150px" height="150px" alt="Elephant at sunset">
+    <img src="./images/gifcompressor/B_Stage0_Block0_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
+    <img src="./images/gifcompressor/G_Stage0_Block0_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
+</div>
+
 
 -----
 
