@@ -1,3 +1,7 @@
 
 .DS_Store
 .idea/*
+*.tar
+A_Stage0_Block0_Head1.gif
+cluster_visualize_gif.py
+images/cluster_vis/*
