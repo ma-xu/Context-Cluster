@@ -1,4 +1,4 @@
-# Image as Set of Points - ICLR'23 [Oral, Top5%]
+# [Image as Set of Points](https://openreview.net/forum?id=awnvqZja69) - ICLR'23 [Oral, Top5%]
 
 by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/), 
 [Huan Wang](http://huanwang.tech/), [Can Qin](https://canqin.tech/), [Bin Sun](https://www.linkedin.com/in/bin-sun-2993b4142/), 
@@ -25,7 +25,8 @@ by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/
 ## TO DO (Mar 9):
 - [ ] update the checkpoints (conv1x1 -> nn.linear, shape doesn't match)
 - [ ] add large model and checkpoints
-- [ ] release codes/ checkpoints for CoC without region partition
+- [x] release codes/ checkpoints for CoC without region partition (re-trained with updated codes, get better results)
+- [x] release the visualization script.
 
 
 ## Image Classification
@@ -60,6 +61,7 @@ We upload the **checkpoints** and **logs** to anonymous google drive. Feel free 
 | :---     |   :---:    |  :---: |  :---:  |  :---:  |:---:  |
 | ContextCliuster-tiny  |    5.3M     |   224 |  71.8  |518.4| [[checkpoint & logs]](https://drive.google.com/drive/folders/1Q_6W3xKMX63aQOBaqiwX5y1fCj4hVOIA?usp=sharing) |
 | ContextCliuster-tiny* |   5.3M     |   224 |  71.7  | 510.8| [[checkpoint & logs]](https://drive.google.com/drive/folders/1eod2CcYpLoPXmANUxT6dsNIHECbgAb0r?usp=sharing) |
+| ContextCliuster-tiny_plain (w/o region partition) |   5.3M     |   224 |  72.9  | -| [[checkpoint]](https://web.northeastern.edu/smilelab/xuma/ContextCluster/checkpoints/coc_tiny_plain/coc_tiny_plain.pth.tar) |
 | ContextCliuster-small  |   14.0M     |   224 |  77.5  |513.0| [[checkpoint & logs]](https://drive.google.com/drive/folders/1WSmnbSgy1I1HOTTTAQgOKEzXSvd3Kmh-?usp=sharing) |
 | ContextCliuster-medium |   27.9M     |   224 |  81.0 |325.2| [[checkpoint & logs]](https://drive.google.com/drive/folders/1sPxnEHb2AHDD9bCQh6MA0I_-7EBrvlT5?usp=sharing) |
 
@@ -86,6 +88,21 @@ MODEL=coc_tiny # coc variants
 DROP_PATH=0.1 # drop path rates
 python3 -m torch.distributed.launch --nproc_per_node=8 train.py --data_dir /dev/shm/imagenet --model $MODEL -b 128 --lr 1e-3 --drop-path $DROP_PATH --amp
 ```
+
+
+### 5. Clustering Visualization
+We provide a script to visualize the clustering results of CoC for a given stage, block, head.
+
+Different layers/heads will present different clustering patterns.
+
+
+```bash
+# Use example (generated image will saved to images/cluster_vis/{model}):
+python cluster_visualize.py --image {path_to_image} --model {model} --checkpoint {path_to_checkpoint} --stage {stage} --block {block} --head {head}
+ 
+```
+
+
 **See folder [pointcloud](pointcloud/) for point cloud classification taks on ScanObjectNN.**
 
 **See folder [detection](detection/) for Detection and instance segmentation tasks on COCO.**.
