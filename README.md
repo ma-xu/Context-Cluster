@@ -11,13 +11,14 @@ by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/
 [![Huggingface space](https://img.shields.io/badge/🤗-Huggingface%20space-brightgreen.svg)](https://huggingface.co/spaces/CVPR/LIVE)
 -->
 
-<!--<div align="center">
-  <img src="uploads/img1.png" width="550px" height="380px">
-</div>-->
-
-
 <div align="center">
-    An example of clustering training updates(from scratch to last epoch) for the four stages.
+  <img src="uploads/img1.png" width="550px" height="380px">
+</div>
+
+-----
+## Clustering Process (from scratch to last epoch):
+<div align="center">
+    <b>An example of clustering training updates(from scratch to last epoch) for the four stages.</b>
     <br>
     <img src="./images/gifcompressor/A_Stage0_Block0_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
     <img src="./images/gifcompressor/A_Stage1_Block3_Head2-min.gif" width="150px" height="150px" alt="Elephant at sunset">
@@ -40,9 +41,9 @@ by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/
 
 -----
 
-<div align="center">
+<!--<div align="center">
   <img src="uploads/rebuttal_examples.png" width="650px" height="650px">
-</div>
+</div>-->
 
 
 ## TO DO (Mar 9):
