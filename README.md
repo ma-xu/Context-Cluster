@@ -23,7 +23,7 @@ by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/
     <img src="./images/gifcompressor/A_Stage0_Block0_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
     <img src="./images/gifcompressor/A_Stage1_Block3_Head2-min.gif" width="150px" height="150px" alt="Elephant at sunset">
     <img src="./images/gifcompressor/A_Stage2_Block3_Head1-min.gif" width="150px" height="150px" alt="Elephant at sunset">
-    <img src="./images/gifcompressor/A_Stage3_Block1_Head4-min.gif" height="150px" alt="Elephant at sunset">
+    <img src="./images/gifcompressor/A_Stage3_Block1_Head4-min.gif" width="150px" height="150px" alt="Elephant at sunset">
     <br>
     
 </div>
