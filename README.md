@@ -47,6 +47,7 @@ by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/
 
 
 ## TO DO (Mar 9):
+- [ ] Fix a small bug in Line 170 and re-train all checkpoints.
 - [ ] update the checkpoints (conv1x1 -> nn.linear, shape doesn't match)
 - [ ] add large model and checkpoints
 - [x] release codes/ checkpoints for CoC without region partition (re-trained with updated codes, get better results)
