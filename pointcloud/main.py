@@ -1,9 +1,9 @@
 """
 for training with resume functions.
 Usage:
-python main.py --model PointNet --msg demo
+python main.py --model pointMLP_CoC --msg demo
 or
-CUDA_VISIBLE_DEVICES=0 nohup python main.py --model PointNet --msg demo > nohup/PointNet_demo.out &
+CUDA_VISIBLE_DEVICES=0 nohup python main.py --model pointMLP_CoC --msg demo > nohup/pointMLP_CoC_demo.out &
 """
 import argparse
 import os
