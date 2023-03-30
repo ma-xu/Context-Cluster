@@ -84,11 +84,11 @@ We upload the **checkpoints** and **logs** to anonymous google drive. Feel free 
 
 | Model    |  #params | Image resolution | Top1 Acc| Throughtput | Download | 
 | :---     |   :---:    |  :---: |  :---:  |  :---:  |:---:  |
-| ContextCliuster-tiny  |    5.3M     |   224 |  71.8  |518.4| [[checkpoint & logs]](https://drive.google.com/drive/folders/1Q_6W3xKMX63aQOBaqiwX5y1fCj4hVOIA?usp=sharing) |
-| ContextCliuster-tiny* |   5.3M     |   224 |  71.7  | 510.8| [[checkpoint & logs]](https://drive.google.com/drive/folders/1eod2CcYpLoPXmANUxT6dsNIHECbgAb0r?usp=sharing) |
-| ContextCliuster-tiny_plain (w/o region partition) |   5.3M     |   224 |  72.9  | -| [[checkpoint]](https://web.northeastern.edu/smilelab/xuma/ContextCluster/checkpoints/coc_tiny_plain/coc_tiny_plain.pth.tar) |
-| ContextCliuster-small  |   14.0M     |   224 |  77.5  |513.0| [[checkpoint & logs]](https://drive.google.com/drive/folders/1WSmnbSgy1I1HOTTTAQgOKEzXSvd3Kmh-?usp=sharing) |
-| ContextCliuster-medium |   27.9M     |   224 |  81.0 |325.2| [[checkpoint & logs]](https://drive.google.com/drive/folders/1sPxnEHb2AHDD9bCQh6MA0I_-7EBrvlT5?usp=sharing) |
+| ContextCluster-tiny  |    5.3M     |   224 |  71.8  |518.4| [[checkpoint & logs]](https://drive.google.com/drive/folders/1Q_6W3xKMX63aQOBaqiwX5y1fCj4hVOIA?usp=sharing) |
+| ContextCluster-tiny* |   5.3M     |   224 |  71.7  | 510.8| [[checkpoint & logs]](https://drive.google.com/drive/folders/1eod2CcYpLoPXmANUxT6dsNIHECbgAb0r?usp=sharing) |
+| ContextCluster-tiny_plain (w/o region partition) |   5.3M     |   224 |  72.9  | -| [[checkpoint]](https://web.northeastern.edu/smilelab/xuma/ContextCluster/checkpoints/coc_tiny_plain/coc_tiny_plain.pth.tar) |
+| ContextCluster-small  |   14.0M     |   224 |  77.5  |513.0| [[checkpoint & logs]](https://drive.google.com/drive/folders/1WSmnbSgy1I1HOTTTAQgOKEzXSvd3Kmh-?usp=sharing) |
+| ContextCluster-medium |   27.9M     |   224 |  81.0 |325.2| [[checkpoint & logs]](https://drive.google.com/drive/folders/1sPxnEHb2AHDD9bCQh6MA0I_-7EBrvlT5?usp=sharing) |
 
 
 
