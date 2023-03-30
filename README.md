@@ -130,7 +130,7 @@ python cluster_visualize.py --image {path_to_image} --model {model} --checkpoint
 
 **See folder [pointcloud](pointcloud/) for point cloud classification taks on ScanObjectNN.**
 
-**See folder [detection](detection/) for Detection and instance segmentation tasks on COCO.**.
+**See folder [detection](detection/) for Detection and instance segmentation tasks on COCO.**
 
 **See folder [segmentation](segmentation/) for Semantic Segmentation task on ADE20K.**
 
