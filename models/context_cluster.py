@@ -59,8 +59,8 @@ default_cfgs = {
 class PointRecuder(nn.Module):
     """
     Point Reducer is implemented by a layer of conv since it is mathmatically equal.
-    Input: tensor in shape [B, C, H, W]
-    Output: tensor in shape [B, C, H/stride, W/stride]
+    Input: tensor in shape [B, in_chans, H, W]
+    Output: tensor in shape [B, embed_dim, H/stride, W/stride]
     """
 
     def __init__(self, patch_size=16, stride=16, padding=0,
