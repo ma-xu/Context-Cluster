@@ -162,13 +162,8 @@ class Cluster(nn.Module):
         sim = sim * mask
         value2 = rearrange(value, 'b c w h -> b (w h) c')  # [B,N,D]
         # aggregate step, out shape [B,M,D]
-        ###
-        # Update Comment: Mar/26/2022
-        # a small bug: mask.sum should be sim.sum according to Eq. (1), mask can be considered as a hard version of sim in out implementation.
-        # We will update all checkpoints and the bug once all models are re-trained.
-        ###
         out = ((value2.unsqueeze(dim=1) * sim.unsqueeze(dim=-1)).sum(dim=2) + value_centers) / (
-                    mask.sum(dim=-1, keepdim=True) + 1.0)  # [B,M,D]
+                    sim.sum(dim=-1, keepdim=True) + 1.0)  # [B,M,D]
 
         if self.return_center:
             out = rearrange(out, "b (w h) c -> b c w h", w=ww)
