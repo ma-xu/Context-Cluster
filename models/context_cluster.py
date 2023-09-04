@@ -162,8 +162,7 @@ class Cluster(nn.Module):
         sim = sim * mask
         value2 = rearrange(value, 'b c w h -> b (w h) c')  # [B,N,D]
         # aggregate step, out shape [B,M,D]
-        out = ((value2.unsqueeze(dim=1) * sim.unsqueeze(dim=-1)).sum(dim=2) + value_centers) / (
-                    sim.sum(dim=-1, keepdim=True) + 1.0)  # [B,M,D]
+        out = (torch.bmm(sim, value2) + value_centers) / (sim.sum(dim=-1, keepdim=True) + 1.0)  # [B,M,D]
 
         if self.return_center:
             out = rearrange(out, "b (w h) c -> b c w h", w=ww)
