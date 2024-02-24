@@ -47,9 +47,8 @@ by [Xu Ma*](https://ma-xu.github.io/), [Yuqian Zhou*](https://yzhouas.github.io/
 
 
 ## TO DO (Mar 9):
-- [ ] Fix a small bug in Line 170 and re-train all checkpoints.
-- [ ] update the checkpoints (conv1x1 -> nn.linear, shape doesn't match)
-- [ ] add large model and checkpoints
+
+- [x] Feb/24/2024: Re-train all models with better results, updated the link to google drive (smilelab webpage broken).
 - [x] release codes/ checkpoints for CoC without region partition (re-trained with updated codes, get better results)
 - [x] release the visualization script.
 
@@ -82,13 +81,12 @@ data prepare: ImageNet with the following folder structure, you can extract Imag
 ### 2. Pre-trained Context Cluster Models
 We update the **new checkpoints** and **logs** (fix bugs, FC implementation). Feel free to download.
 
-| Model    |  #params | Image resolution | Top1 Acc| Throughtput | Download | 
+| Model    |  #params | Image resolution | Top1 Acc| Throughtput | Download (updated link with higher acc.) | 
 | :---     |   :---:    |  :---: |  :---:  |  :---:  |:---:  |
-| ContextCluster-tiny  |    5.3M     |   224 |  71.9  |518.4| [[checkpoint & logs]](https://web.northeastern.edu/smilelab/xuma/ContextCluster/coc-updates/tiny/) |
-| ContextCluster-tiny2 |   5.3M     |   224 |  72.0  | 510.8| [[checkpoint & logs]](https://web.northeastern.edu/smilelab/xuma/ContextCluster/coc-updates/tiny2/) |
-| ContextCluster-tiny_plain (w/o region partition) |   5.3M     |   224 |  72.8  | -| [[checkpoint]](https://web.northeastern.edu/smilelab/xuma/ContextCluster/coc-updates/tiny-plain/) |
-| ContextCluster-small  |   14.0M     |   224 |  77.8  |513.0| [[checkpoint & logs]](https://web.northeastern.edu/smilelab/xuma/ContextCluster/coc-updates/small/) |
-| ContextCluster-medium |   27.9M     |   224 |  81.2  |325.2| [[checkpoint & logs]](https://web.northeastern.edu/smilelab/xuma/ContextCluster/coc-updates/medium/) |
+| ContextCluster-tiny  |    5.3M     |   224 |  73.2  |518.4| [[checkpoint & logs]](https://drive.google.com/drive/folders/155Lfofxr7vpdcUxL8ZvzlrNX4cUlhn3J?usp=sharing) |
+| ContextCluster-tiny_plain (w/o region partition) |   5.3M     |   224 |  73.8 | -| [[checkpoint]](https://drive.google.com/drive/folders/1HSZlO_XMkw6mM90Cqo3tVFxEUX8PvWCg?usp=sharing) |
+| ContextCluster-small  |   14.0M     |   224 |  78.1  |513.0| [[checkpoint & logs]](https://drive.google.com/drive/folders/19zbCOS33We7HOjL575Di5wyuLbnDebdE?usp=sharing) |
+| ContextCluster-medium |   27.9M     |   224 |  81.2  |325.2| [[checkpoint & logs]](https://drive.google.com/drive/folders/1H3Fs3SVE0LFHuP6iP9nTg2_ZMrkfk9S8?usp=sharing) |
 
 
 
