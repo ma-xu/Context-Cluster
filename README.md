@@ -84,7 +84,7 @@ We update the **new checkpoints** and **logs** (fix bugs, FC implementation). Fe
 | Model    |  #params | Image resolution | Top1 Acc| Throughtput | Download (updated link with higher acc.) | 
 | :---     |   :---:    |  :---: |  :---:  |  :---:  |:---:  |
 | ContextCluster-tiny  |    5.3M     |   224 |  73.2  |518.4| [[checkpoint & logs]](https://drive.google.com/drive/folders/155Lfofxr7vpdcUxL8ZvzlrNX4cUlhn3J?usp=sharing) |
-| ContextCluster-tiny_plain (w/o region partition) |   5.3M     |   224 |  73.8 | -| [[checkpoint]](https://drive.google.com/drive/folders/1HSZlO_XMkw6mM90Cqo3tVFxEUX8PvWCg?usp=sharing) |
+| ContextCluster-tiny_plain (w/o region partition) |   5.3M     |   224 |  73.8 | -| [[checkpoint & logs]](https://drive.google.com/drive/folders/1HSZlO_XMkw6mM90Cqo3tVFxEUX8PvWCg?usp=sharing) |
 | ContextCluster-small  |   14.0M     |   224 |  78.1  |513.0| [[checkpoint & logs]](https://drive.google.com/drive/folders/19zbCOS33We7HOjL575Di5wyuLbnDebdE?usp=sharing) |
 | ContextCluster-medium |   27.9M     |   224 |  81.2  |325.2| [[checkpoint & logs]](https://drive.google.com/drive/folders/1H3Fs3SVE0LFHuP6iP9nTg2_ZMrkfk9S8?usp=sharing) |
 
